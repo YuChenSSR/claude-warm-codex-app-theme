@@ -9,9 +9,10 @@ This adapts the small Claude Warm palette used by
 to Codex's `codex-theme-v1` export format and the corresponding settings in
 `~/.codex/config.toml`.
 
-Codex's `codeThemeId` stays on the built-in `absolutely` code highlighter. The
-app chrome theme itself is named **Claude Warm** in this repository and installer
-output.
+Codex's `codeThemeId` stays on the built-in `absolutely` code highlighter. That
+field is not the chrome theme's display name; it only tells Codex which bundled
+syntax-highlighting theme to use with these app chrome colors. The app chrome
+theme itself is named **Claude Warm** in this repository and installer output.
 
 ## Palette
 
@@ -83,18 +84,31 @@ To restore the previous config, copy back the newest backup from:
 
 ## Copy For UI Import
 
-If your Codex build has an in-app theme import action, copy the raw
-`codex-theme-v1:` payload instead:
+If your Codex build has an in-app theme import action, copy one raw
+`codex-theme-v1:` payload at a time. Codex imports one variant per payload.
+
+Light:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YuChenSSR/claude-warm-codex-app-theme/main/claude-warm-codex.codex-theme-v1 | pbcopy
+curl -fsSL https://raw.githubusercontent.com/YuChenSSR/claude-warm-codex-app-theme/main/claude-warm-codex-light.codex-theme-v1 | pbcopy
+```
+
+Dark:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/YuChenSSR/claude-warm-codex-app-theme/main/claude-warm-codex-dark.codex-theme-v1 | pbcopy
 ```
 
 Or from a local clone:
 
 ```bash
-./copy-theme.sh
+./copy-theme.sh light
+./copy-theme.sh dark
 ```
+
+`./copy-theme.sh` defaults to `light`. `./copy-theme.sh both` copies the
+combined two-line payload used by the config installer, but most UI import
+flows expect the split light/dark payloads above.
 
 ## Manual Install
 
@@ -115,6 +129,10 @@ contains one JSON payload with:
 - `variant`
 - `codeThemeId`
 - `theme`
+
+The `codex-theme-v1` payload does not include a separate theme-name field.
+`codeThemeId = "absolutely"` means "use Codex's built-in Absolutely code
+highlighter"; it does not name this app chrome theme.
 
 The installer parses those payloads and writes the equivalent config keys:
 
