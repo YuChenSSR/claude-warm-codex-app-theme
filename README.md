@@ -177,6 +177,11 @@ Restart Warp if the themes do not appear under **Settings -> Appearance ->
 Themes**. For actual see-through window transparency, lower Warp's global
 **Window Opacity** under **Settings -> Appearance -> Window**.
 
+## More Claude Themes
+
+For Claude-inspired themes and app-specific setup notes across more apps, see
+[Claude Theme Hub](https://github.com/YuChenSSR/claude-theme-hub).
+
 ## Attribution
 
 Palette adapted from
