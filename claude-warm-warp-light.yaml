@@ -6,7 +6,7 @@ foreground: '#2d2d2b'
 details: lighter
 background_image:
   path: claude-warm-warp-light.jpg
-  opacity: 42
+  opacity: 72
 terminal_colors:
   normal:
     black: '#2d2d2b'

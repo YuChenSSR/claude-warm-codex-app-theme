@@ -162,6 +162,9 @@ and are included as plain `.yaml` files with matching soft JPG backgrounds:
 - [`claude-warm-warp-light.yaml`](./claude-warm-warp-light.yaml)
 - [`claude-warm-warp-dark.yaml`](./claude-warm-warp-dark.yaml)
 
+The backgrounds are original soft illustrations inspired by Claude Code
+Buddy-style terminal pets. They are not official Anthropic assets.
+
 Install them on macOS:
 
 ```bash
