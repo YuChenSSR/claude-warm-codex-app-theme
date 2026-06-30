@@ -152,14 +152,6 @@ The chrome theme model includes:
 This repository only changes those stable user-configurable fields. It does
 not patch the Codex application bundle.
 
-## Background Images
-
-Codex App themes currently do not support Warp-style `background_image`
-wallpapers in `codex-theme-v1` or `~/.codex/config.toml`.
-
-For the Claude Warm pet backgrounds, use the matching Warp theme repository:
-[claude-warm-warp-theme](https://github.com/YuChenSSR/claude-warm-warp-theme).
-
 ## More Claude Themes
 
 For Claude-inspired themes and app-specific setup notes across more apps, see
