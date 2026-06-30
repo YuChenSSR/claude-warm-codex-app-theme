@@ -1,9 +1,9 @@
 # Claude Warm for Codex App
-# Theme name: Claude light
+# Theme name: Claude Warm Light
 # Paste this into ~/.codex/config.toml, replacing any existing
 # [desktop.appearanceLightChromeTheme] block and nested tables.
 # Under the existing [desktop] table, set:
-# appearanceLightCodeThemeId = "Claude light"
+# appearanceLightCodeThemeId = "codex"
 
 [desktop.appearanceLightChromeTheme]
 accent = "#cc7d5e"

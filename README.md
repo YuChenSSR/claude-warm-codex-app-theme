@@ -9,8 +9,9 @@ This adapts the small Claude Warm palette used by
 to Codex's `codex-theme-v1` export format and the corresponding settings in
 `~/.codex/config.toml`.
 
-The `codex-theme-v1` payload uses `codeThemeId` as the imported theme ID:
-`Claude light` for the light variant and `Claude dark` for the dark variant.
+The `codex-theme-v1` payload uses `codeThemeId` to select a built-in Codex code
+theme. This preset uses lowercase `codex` for both variants, matching Codex's
+import requirements.
 
 ## Palette
 
@@ -18,7 +19,8 @@ The `codex-theme-v1` payload uses `codeThemeId` as the imported theme ID:
 
 | Codex role | Color |
 | --- | --- |
-| Theme ID | `Claude light` |
+| Theme name | `Claude Warm Light` |
+| Code theme ID | `codex` |
 | Surface | `#f9f9f7` |
 | Ink | `#2d2d2b` |
 | Accent | `#cc7d5e` |
@@ -30,7 +32,8 @@ The `codex-theme-v1` payload uses `codeThemeId` as the imported theme ID:
 
 | Codex role | Color |
 | --- | --- |
-| Theme ID | `Claude dark` |
+| Theme name | `Claude Warm Dark` |
+| Code theme ID | `codex` |
 | Surface | `#2d2d2b` |
 | Ink | `#f9f9f7` |
 | Accent | `#cc7d5e` |
@@ -97,7 +100,7 @@ To apply a different copied Codex theme payload with the same script, set
 `CODEX_THEME_V1`:
 
 ```bash
-CODEX_THEME_V1='codex-theme-v1:{"codeThemeId":"Claude light","theme":{...},"variant":"light"}' ./install.sh
+CODEX_THEME_V1='codex-theme-v1:{"codeThemeId":"codex","theme":{...},"variant":"light"}' ./install.sh
 ```
 
 To restore the previous config, copy back the newest backup from:
@@ -126,9 +129,9 @@ contains one JSON payload with:
 - `codeThemeId`
 - `theme`
 
-This theme uses `codeThemeId = "Claude light"` for the light variant and
-`codeThemeId = "Claude dark"` for the dark variant, so Codex imports them as new
-theme IDs instead of reusing the built-in `absolutely` ID.
+This theme uses `codeThemeId = "codex"` for both variants. Codex expects this
+field to match one of its built-in code theme IDs, and the ID must start with a
+lowercase letter.
 
 The installer parses those payloads and writes the equivalent config keys:
 
