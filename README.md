@@ -9,10 +9,8 @@ This adapts the small Claude Warm palette used by
 to Codex's `codex-theme-v1` export format and the corresponding settings in
 `~/.codex/config.toml`.
 
-Codex's `codeThemeId` stays on the built-in `absolutely` code highlighter. That
-field is not the chrome theme's display name; it only tells Codex which bundled
-syntax-highlighting theme to use with these app chrome colors. The app chrome
-theme itself is named **Claude Warm** in this repository and installer output.
+The `codex-theme-v1` payload uses `codeThemeId` as the imported theme ID:
+`Claude light` for the light variant and `Claude dark` for the dark variant.
 
 ## Palette
 
@@ -20,8 +18,7 @@ theme itself is named **Claude Warm** in this repository and installer output.
 
 | Codex role | Color |
 | --- | --- |
-| Theme name | `Claude Warm Light` |
-| Code highlighter | `Absolutely` built into Codex |
+| Theme ID | `Claude light` |
 | Surface | `#f9f9f7` |
 | Ink | `#2d2d2b` |
 | Accent | `#cc7d5e` |
@@ -33,8 +30,7 @@ theme itself is named **Claude Warm** in this repository and installer output.
 
 | Codex role | Color |
 | --- | --- |
-| Theme name | `Claude Warm Dark` |
-| Code highlighter | `Absolutely` built into Codex |
+| Theme ID | `Claude dark` |
 | Surface | `#2d2d2b` |
 | Ink | `#f9f9f7` |
 | Accent | `#cc7d5e` |
@@ -73,7 +69,7 @@ To apply a different copied Codex theme payload with the same script, set
 `CODEX_THEME_V1`:
 
 ```bash
-CODEX_THEME_V1='codex-theme-v1:{"codeThemeId":"absolutely","theme":{...},"variant":"light"}' ./install.sh
+CODEX_THEME_V1='codex-theme-v1:{"codeThemeId":"Claude light","theme":{...},"variant":"light"}' ./install.sh
 ```
 
 To restore the previous config, copy back the newest backup from:
@@ -130,9 +126,9 @@ contains one JSON payload with:
 - `codeThemeId`
 - `theme`
 
-The `codex-theme-v1` payload does not include a separate theme-name field.
-`codeThemeId = "absolutely"` means "use Codex's built-in Absolutely code
-highlighter"; it does not name this app chrome theme.
+This theme uses `codeThemeId = "Claude light"` for the light variant and
+`codeThemeId = "Claude dark"` for the dark variant, so Codex imports them as new
+theme IDs instead of reusing the built-in `absolutely` ID.
 
 The installer parses those payloads and writes the equivalent config keys:
 

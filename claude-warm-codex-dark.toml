@@ -1,9 +1,9 @@
 # Claude Warm for Codex App, dark variant
-# Theme name: Claude Warm Dark
+# Theme name: Claude dark
 # Paste this into ~/.codex/config.toml, replacing any existing
 # [desktop.appearanceDarkChromeTheme] block and nested tables.
-# Optional built-in code highlighter: under the existing [desktop] table, set:
-# appearanceDarkCodeThemeId = "absolutely"
+# Under the existing [desktop] table, set:
+# appearanceDarkCodeThemeId = "Claude dark"
 
 [desktop.appearanceDarkChromeTheme]
 accent = "#cc7d5e"
