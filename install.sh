@@ -197,7 +197,7 @@ if tomllib is not None:
 config_path.write_text(text)
 
 installed = ", ".join(sorted(specs))
-print(f"Imported Codex theme {theme_name!r} variants ({installed}) into {config_path}")
+print(f"Applied Codex theme {theme_name!r} variants ({installed}) to {config_path}")
 if backup_path:
     print(f"Backup saved to {backup_path}")
 PY

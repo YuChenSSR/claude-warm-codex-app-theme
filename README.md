@@ -41,9 +41,9 @@ output.
 | Diff removed | `#ff5f38` |
 | Skill | `#cc7d5e` |
 
-## Install
+## Apply To Current Config
 
-Run the installer:
+Run the installer to apply Claude Warm to the active Codex config:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/YuChenSSR/claude-warm-codex-app-theme/main/install.sh | bash
@@ -61,15 +61,39 @@ Restart Codex after installation so the desktop app reloads
 The installer creates a timestamped backup under
 `~/.codex/backups/claude-warm-codex-app-theme/` before changing the config.
 
-The installer is self-contained and imports the two bundled
+This script applies the theme to the current light/dark appearance settings. It
+does not register a new named theme entry inside Codex's UI theme picker.
+
+The installer is self-contained and applies the two bundled
 `codex-theme-v1:` lines from
 [`claude-warm-codex.codex-theme-v1`](./claude-warm-codex.codex-theme-v1).
 
-To import a different copied Codex theme payload with the same script, set
+To apply a different copied Codex theme payload with the same script, set
 `CODEX_THEME_V1`:
 
 ```bash
 CODEX_THEME_V1='codex-theme-v1:{"codeThemeId":"absolutely","theme":{...},"variant":"light"}' ./install.sh
+```
+
+To restore the previous config, copy back the newest backup from:
+
+```bash
+~/.codex/backups/claude-warm-codex-app-theme/
+```
+
+## Copy For UI Import
+
+If your Codex build has an in-app theme import action, copy the raw
+`codex-theme-v1:` payload instead:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/YuChenSSR/claude-warm-codex-app-theme/main/claude-warm-codex.codex-theme-v1 | pbcopy
+```
+
+Or from a local clone:
+
+```bash
+./copy-theme.sh
 ```
 
 ## Manual Install
