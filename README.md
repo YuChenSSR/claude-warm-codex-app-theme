@@ -38,6 +38,34 @@ The `codex-theme-v1` payload uses `codeThemeId` as the imported theme ID:
 | Diff removed | `#ff5f38` |
 | Skill | `#cc7d5e` |
 
+## Copy For UI Import
+
+If your Codex build has an in-app theme import action, copy one raw
+`codex-theme-v1:` payload at a time. Codex imports one variant per payload.
+
+Light:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/YuChenSSR/claude-warm-codex-app-theme/main/claude-warm-codex-light.codex-theme-v1 | pbcopy
+```
+
+Dark:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/YuChenSSR/claude-warm-codex-app-theme/main/claude-warm-codex-dark.codex-theme-v1 | pbcopy
+```
+
+Or from a local clone:
+
+```bash
+./copy-theme.sh light
+./copy-theme.sh dark
+```
+
+`./copy-theme.sh` defaults to `light`. `./copy-theme.sh both` copies the
+combined two-line payload used by the config installer, but most UI import
+flows expect the split light/dark payloads above.
+
 ## Apply To Current Config
 
 Run the installer to apply Claude Warm to the active Codex config:
@@ -77,34 +105,6 @@ To restore the previous config, copy back the newest backup from:
 ```bash
 ~/.codex/backups/claude-warm-codex-app-theme/
 ```
-
-## Copy For UI Import
-
-If your Codex build has an in-app theme import action, copy one raw
-`codex-theme-v1:` payload at a time. Codex imports one variant per payload.
-
-Light:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/YuChenSSR/claude-warm-codex-app-theme/main/claude-warm-codex-light.codex-theme-v1 | pbcopy
-```
-
-Dark:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/YuChenSSR/claude-warm-codex-app-theme/main/claude-warm-codex-dark.codex-theme-v1 | pbcopy
-```
-
-Or from a local clone:
-
-```bash
-./copy-theme.sh light
-./copy-theme.sh dark
-```
-
-`./copy-theme.sh` defaults to `light`. `./copy-theme.sh both` copies the
-combined two-line payload used by the config installer, but most UI import
-flows expect the split light/dark payloads above.
 
 ## Manual Install
 
