@@ -4,6 +4,9 @@ cursor: '#cc7d5e'
 background: '#2d2d2b'
 foreground: '#f9f9f7'
 details: darker
+background_image:
+  path: claude-warm-warp-dark.jpg
+  opacity: 46
 terminal_colors:
   normal:
     black: '#1f1f1d'

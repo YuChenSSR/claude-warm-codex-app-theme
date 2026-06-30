@@ -4,6 +4,9 @@ cursor: '#cc7d5e'
 background: '#f9f9f7'
 foreground: '#2d2d2b'
 details: lighter
+background_image:
+  path: claude-warm-warp-light.jpg
+  opacity: 42
 terminal_colors:
   normal:
     black: '#2d2d2b'
