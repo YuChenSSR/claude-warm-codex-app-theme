@@ -1,6 +1,7 @@
-# Claude Warm for Codex App
+# Claude Warm for Codex App and Warp
 
-A warm light and dark theme preset for the Codex desktop app.
+A warm light and dark theme preset for the Codex desktop app, with matching
+Warp terminal themes.
 
 Theme name: **Claude Warm**
 
@@ -151,6 +152,26 @@ The chrome theme model includes:
 
 This repository only changes those stable user-configurable fields. It does
 not patch the Codex application bundle.
+
+## Warp Themes
+
+Warp theme files follow
+[Warp's custom theme format](https://docs.warp.dev/terminal/appearance/custom-themes)
+and are included as plain `.yaml` files:
+
+- [`claude-warm-warp-light.yaml`](./claude-warm-warp-light.yaml)
+- [`claude-warm-warp-dark.yaml`](./claude-warm-warp-dark.yaml)
+
+Install them on macOS:
+
+```bash
+mkdir -p "$HOME/.warp/themes"
+cp claude-warm-warp-light.yaml claude-warm-warp-dark.yaml "$HOME/.warp/themes/"
+```
+
+Warp may take a few minutes to discover the themes directory the first time.
+Restart Warp if the themes do not appear under **Settings -> Appearance ->
+Themes**.
 
 ## Attribution
 

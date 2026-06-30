@@ -1,0 +1,25 @@
+name: Claude Warm Dark
+accent: '#cc7d5e'
+cursor: '#cc7d5e'
+background: '#2d2d2b'
+foreground: '#f9f9f7'
+details: darker
+terminal_colors:
+  normal:
+    black: '#1f1f1d'
+    red: '#d46a4d'
+    green: '#00c853'
+    yellow: '#c7964d'
+    blue: '#8ba0c5'
+    magenta: '#cc7d5e'
+    cyan: '#82b3ad'
+    white: '#e7e0d5'
+  bright:
+    black: '#77716a'
+    red: '#ff8a68'
+    green: '#5ee08a'
+    yellow: '#e2bd75'
+    blue: '#afbee0'
+    magenta: '#e39a78'
+    cyan: '#a8d0ca'
+    white: '#fffdf8'
