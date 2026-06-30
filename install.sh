@@ -3,6 +3,7 @@ set -euo pipefail
 
 CONFIG="${CODEX_CONFIG:-$HOME/.codex/config.toml}"
 BACKUP_DIR="${CODEX_CONFIG_BACKUP_DIR:-$HOME/.codex/backups/claude-warm-codex-app-theme}"
+THEME_NAME="${CODEX_THEME_NAME:-Claude Warm}"
 
 DEFAULT_CODEX_THEME_V1='codex-theme-v1:{"codeThemeId":"absolutely","theme":{"accent":"#cc7d5e","contrast":40,"fonts":{"code":null,"ui":null},"ink":"#2d2d2b","opaqueWindows":true,"semanticColors":{"diffAdded":"#00c853","diffRemoved":"#ff5f38","skill":"#cc7d5e"},"surface":"#f9f9f7"},"variant":"light"}
 codex-theme-v1:{"codeThemeId":"absolutely","theme":{"accent":"#cc7d5e","contrast":60,"fonts":{"code":null,"ui":null},"ink":"#f9f9f7","opaqueWindows":false,"semanticColors":{"diffAdded":"#00c853","diffRemoved":"#ff5f38","skill":"#cc7d5e"},"surface":"#2d2d2b"},"variant":"dark"}'
@@ -11,7 +12,7 @@ if [[ -z "${CODEX_THEME_V1:-}" && "$#" -eq 0 ]]; then
   export CODEX_THEME_V1="$DEFAULT_CODEX_THEME_V1"
 fi
 
-python3 - "$CONFIG" "$BACKUP_DIR" "$@" <<'PY'
+python3 - "$CONFIG" "$BACKUP_DIR" "$THEME_NAME" "$@" <<'PY'
 from __future__ import annotations
 
 from datetime import datetime
@@ -29,7 +30,8 @@ except ModuleNotFoundError:
 
 config_path = Path(sys.argv[1]).expanduser()
 backup_dir = Path(sys.argv[2]).expanduser()
-extra_inputs = sys.argv[3:]
+theme_name = sys.argv[3]
+extra_inputs = sys.argv[4:]
 
 
 def toml_value(value):
@@ -195,7 +197,7 @@ if tomllib is not None:
 config_path.write_text(text)
 
 installed = ", ".join(sorted(specs))
-print(f"Imported Codex theme variants ({installed}) into {config_path}")
+print(f"Imported Codex theme {theme_name!r} variants ({installed}) into {config_path}")
 if backup_path:
     print(f"Backup saved to {backup_path}")
 PY

@@ -2,10 +2,16 @@
 
 A warm light and dark theme preset for the Codex desktop app.
 
+Theme name: **Claude Warm**
+
 This adapts the small Claude Warm palette used by
 [claude-warm-craft-agent-theme](https://github.com/YuChenSSR/claude-warm-craft-agent-theme)
 to Codex's `codex-theme-v1` export format and the corresponding settings in
 `~/.codex/config.toml`.
+
+Codex's `codeThemeId` stays on the built-in `absolutely` code highlighter. The
+app chrome theme itself is named **Claude Warm** in this repository and installer
+output.
 
 ## Palette
 
@@ -13,7 +19,8 @@ to Codex's `codex-theme-v1` export format and the corresponding settings in
 
 | Codex role | Color |
 | --- | --- |
-| Code theme | `absolutely` |
+| Theme name | `Claude Warm Light` |
+| Code highlighter | `Absolutely` built into Codex |
 | Surface | `#f9f9f7` |
 | Ink | `#2d2d2b` |
 | Accent | `#cc7d5e` |
@@ -25,7 +32,8 @@ to Codex's `codex-theme-v1` export format and the corresponding settings in
 
 | Codex role | Color |
 | --- | --- |
-| Code theme | `absolutely` |
+| Theme name | `Claude Warm Dark` |
+| Code highlighter | `Absolutely` built into Codex |
 | Surface | `#2d2d2b` |
 | Ink | `#f9f9f7` |
 | Accent | `#cc7d5e` |

@@ -1,13 +1,16 @@
 {
-  "name": "Claude Warm for Codex App",
+  "name": "Claude Warm",
   "description": "Warm light and dark theme settings for the Codex desktop app in codex-theme-v1 format.",
   "author": "YuChenSSR",
   "license": "MIT",
   "format": "codex-theme-v1",
+  "application": "Codex App",
   "source": "https://github.com/YuChenSSR/claude-warm-craft-agent-theme",
   "themes": {
     "light": {
+      "name": "Claude Warm Light",
       "codeThemeId": "absolutely",
+      "codeThemeName": "Absolutely",
       "surface": "#f9f9f7",
       "ink": "#2d2d2b",
       "accent": "#cc7d5e",
@@ -20,7 +23,9 @@
       }
     },
     "dark": {
+      "name": "Claude Warm Dark",
       "codeThemeId": "absolutely",
+      "codeThemeName": "Absolutely",
       "surface": "#2d2d2b",
       "ink": "#f9f9f7",
       "accent": "#cc7d5e",
