@@ -5,8 +5,8 @@ CONFIG="${CODEX_CONFIG:-$HOME/.codex/config.toml}"
 BACKUP_DIR="${CODEX_CONFIG_BACKUP_DIR:-$HOME/.codex/backups/claude-warm-codex-app-theme}"
 THEME_NAME="${CODEX_THEME_NAME:-Claude Warm}"
 
-DEFAULT_CODEX_THEME_V1='codex-theme-v1:{"codeThemeId":"codex","theme":{"accent":"#cc7d5e","contrast":40,"fonts":{"code":null,"ui":null},"ink":"#2d2d2b","opaqueWindows":true,"semanticColors":{"diffAdded":"#00c853","diffRemoved":"#ff5f38","skill":"#cc7d5e"},"surface":"#f9f9f7"},"variant":"light"}
-codex-theme-v1:{"codeThemeId":"codex","theme":{"accent":"#cc7d5e","contrast":60,"fonts":{"code":null,"ui":null},"ink":"#f9f9f7","opaqueWindows":false,"semanticColors":{"diffAdded":"#00c853","diffRemoved":"#ff5f38","skill":"#cc7d5e"},"surface":"#2d2d2b"},"variant":"dark"}'
+DEFAULT_CODEX_THEME_V1='codex-theme-v1:{"codeThemeId":"absolutely","theme":{"accent":"#cc7d5e","contrast":40,"fonts":{"code":null,"ui":null},"ink":"#2d2d2b","opaqueWindows":true,"semanticColors":{"diffAdded":"#00c853","diffRemoved":"#ff5f38","skill":"#cc7d5e"},"surface":"#f9f9f7"},"variant":"light"}
+codex-theme-v1:{"codeThemeId":"absolutely","theme":{"accent":"#cc7d5e","contrast":60,"fonts":{"code":null,"ui":null},"ink":"#f9f9f7","opaqueWindows":false,"semanticColors":{"diffAdded":"#00c853","diffRemoved":"#ff5f38","skill":"#cc7d5e"},"surface":"#2d2d2b"},"variant":"dark"}'
 
 if [[ -z "${CODEX_THEME_V1:-}" && "$#" -eq 0 ]]; then
   export CODEX_THEME_V1="$DEFAULT_CODEX_THEME_V1"

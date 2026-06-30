@@ -11,8 +11,8 @@ to Codex's `codex-theme-v1` export format and the corresponding settings in
 `~/.codex/config.toml`.
 
 The `codex-theme-v1` payload uses `codeThemeId` to select a built-in Codex code
-theme. This preset uses lowercase `codex` for both variants, matching Codex's
-import requirements.
+theme. This preset uses lowercase `absolutely` for both variants, matching
+Codex's import requirements.
 
 ## Palette
 
@@ -21,7 +21,7 @@ import requirements.
 | Codex role | Color |
 | --- | --- |
 | Theme name | `Claude Warm Light` |
-| Code theme ID | `codex` |
+| Code theme ID | `absolutely` |
 | Surface | `#f9f9f7` |
 | Ink | `#2d2d2b` |
 | Accent | `#cc7d5e` |
@@ -34,7 +34,7 @@ import requirements.
 | Codex role | Color |
 | --- | --- |
 | Theme name | `Claude Warm Dark` |
-| Code theme ID | `codex` |
+| Code theme ID | `absolutely` |
 | Surface | `#2d2d2b` |
 | Ink | `#f9f9f7` |
 | Accent | `#cc7d5e` |
@@ -101,7 +101,7 @@ To apply a different copied Codex theme payload with the same script, set
 `CODEX_THEME_V1`:
 
 ```bash
-CODEX_THEME_V1='codex-theme-v1:{"codeThemeId":"codex","theme":{...},"variant":"light"}' ./install.sh
+CODEX_THEME_V1='codex-theme-v1:{"codeThemeId":"absolutely","theme":{...},"variant":"light"}' ./install.sh
 ```
 
 To restore the previous config, copy back the newest backup from:
@@ -130,9 +130,9 @@ contains one JSON payload with:
 - `codeThemeId`
 - `theme`
 
-This theme uses `codeThemeId = "codex"` for both variants. Codex expects this
-field to match one of its built-in code theme IDs, and the ID must start with a
-lowercase letter.
+This theme uses `codeThemeId = "absolutely"` for both variants. Codex expects
+this field to match one of its built-in code theme IDs, and the ID must start
+with a lowercase letter.
 
 The installer parses those payloads and writes the equivalent config keys:
 

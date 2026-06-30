@@ -3,7 +3,7 @@
 # Paste this into ~/.codex/config.toml, replacing any existing
 # [desktop.appearanceDarkChromeTheme] block and nested tables.
 # Under the existing [desktop] table, set:
-# appearanceDarkCodeThemeId = "codex"
+# appearanceDarkCodeThemeId = "absolutely"
 
 [desktop.appearanceDarkChromeTheme]
 accent = "#cc7d5e"

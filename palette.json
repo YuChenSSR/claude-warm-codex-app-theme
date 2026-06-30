@@ -9,8 +9,8 @@
   "themes": {
     "light": {
       "name": "Claude Warm Light",
-      "codeThemeId": "codex",
-      "codeThemeName": "Codex",
+      "codeThemeId": "absolutely",
+      "codeThemeName": "Absolutely",
       "surface": "#f9f9f7",
       "ink": "#2d2d2b",
       "accent": "#cc7d5e",
@@ -24,8 +24,8 @@
     },
     "dark": {
       "name": "Claude Warm Dark",
-      "codeThemeId": "codex",
-      "codeThemeName": "Codex",
+      "codeThemeId": "absolutely",
+      "codeThemeName": "Absolutely",
       "surface": "#2d2d2b",
       "ink": "#f9f9f7",
       "accent": "#cc7d5e",

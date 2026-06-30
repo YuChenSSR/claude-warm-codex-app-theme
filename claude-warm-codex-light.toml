@@ -3,7 +3,7 @@
 # Paste this into ~/.codex/config.toml, replacing any existing
 # [desktop.appearanceLightChromeTheme] block and nested tables.
 # Under the existing [desktop] table, set:
-# appearanceLightCodeThemeId = "codex"
+# appearanceLightCodeThemeId = "absolutely"
 
 [desktop.appearanceLightChromeTheme]
 accent = "#cc7d5e"
