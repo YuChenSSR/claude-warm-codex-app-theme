@@ -1,24 +1,35 @@
 {
   "name": "Claude Warm for Codex App",
-  "description": "Warm ivory, charcoal, and muted-gold theme settings for the Codex desktop app.",
+  "description": "Warm light and dark theme settings for the Codex desktop app in codex-theme-v1 format.",
   "author": "YuChenSSR",
   "license": "MIT",
-  "mode": "light",
+  "format": "codex-theme-v1",
   "source": "https://github.com/YuChenSSR/claude-warm-craft-agent-theme",
-  "codex": {
-    "desktop": {
-      "appearanceLightCodeThemeId": "notion",
-      "appearanceLightChromeTheme": {
-        "surface": "#F8F7F2",
-        "ink": "#494536",
-        "accent": "#B7791F",
-        "contrast": 40,
-        "opaqueWindows": true,
-        "semanticColors": {
-          "diffAdded": "#4B6F3D",
-          "diffRemoved": "#7C1B13",
-          "skill": "#8A5E16"
-        }
+  "themes": {
+    "light": {
+      "codeThemeId": "absolutely",
+      "surface": "#f9f9f7",
+      "ink": "#2d2d2b",
+      "accent": "#cc7d5e",
+      "contrast": 40,
+      "opaqueWindows": true,
+      "semanticColors": {
+        "diffAdded": "#00c853",
+        "diffRemoved": "#ff5f38",
+        "skill": "#cc7d5e"
+      }
+    },
+    "dark": {
+      "codeThemeId": "absolutely",
+      "surface": "#2d2d2b",
+      "ink": "#f9f9f7",
+      "accent": "#cc7d5e",
+      "contrast": 60,
+      "opaqueWindows": false,
+      "semanticColors": {
+        "diffAdded": "#00c853",
+        "diffRemoved": "#ff5f38",
+        "skill": "#cc7d5e"
       }
     }
   }

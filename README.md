@@ -1,22 +1,37 @@
 # Claude Warm for Codex App
 
-A warm ivory, charcoal, and muted-gold theme preset for the Codex desktop app.
+A warm light and dark theme preset for the Codex desktop app.
 
 This adapts the small Claude Warm palette used by
 [claude-warm-craft-agent-theme](https://github.com/YuChenSSR/claude-warm-craft-agent-theme)
-to the Codex app's exposed light chrome theme settings in
+to Codex's `codex-theme-v1` export format and the corresponding settings in
 `~/.codex/config.toml`.
 
 ## Palette
 
+### Light
+
 | Codex role | Color |
 | --- | --- |
-| Surface | `#F8F7F2` |
-| Ink | `#494536` |
-| Accent | `#B7791F` |
-| Diff added | `#4B6F3D` |
-| Diff removed | `#7C1B13` |
-| Skill | `#8A5E16` |
+| Code theme | `absolutely` |
+| Surface | `#f9f9f7` |
+| Ink | `#2d2d2b` |
+| Accent | `#cc7d5e` |
+| Diff added | `#00c853` |
+| Diff removed | `#ff5f38` |
+| Skill | `#cc7d5e` |
+
+### Dark
+
+| Codex role | Color |
+| --- | --- |
+| Code theme | `absolutely` |
+| Surface | `#2d2d2b` |
+| Ink | `#f9f9f7` |
+| Accent | `#cc7d5e` |
+| Diff added | `#00c853` |
+| Diff removed | `#ff5f38` |
+| Skill | `#cc7d5e` |
 
 ## Install
 
@@ -38,6 +53,17 @@ Restart Codex after installation so the desktop app reloads
 The installer creates a timestamped backup under
 `~/.codex/backups/claude-warm-codex-app-theme/` before changing the config.
 
+The installer is self-contained and imports the two bundled
+`codex-theme-v1:` lines from
+[`claude-warm-codex.codex-theme-v1`](./claude-warm-codex.codex-theme-v1).
+
+To import a different copied Codex theme payload with the same script, set
+`CODEX_THEME_V1`:
+
+```bash
+CODEX_THEME_V1='codex-theme-v1:{"codeThemeId":"absolutely","theme":{...},"variant":"light"}' ./install.sh
+```
+
 ## Manual Install
 
 Copy the contents of
@@ -45,9 +71,27 @@ Copy the contents of
 `~/.codex/config.toml`, replacing any existing
 `[desktop.appearanceLightChromeTheme]` block and its nested tables.
 
+For dark mode, also copy
+[`claude-warm-codex-dark.toml`](./claude-warm-codex-dark.toml), replacing any
+existing `[desktop.appearanceDarkChromeTheme]` block and its nested tables.
+
 ## Notes
 
-Codex currently exposes a compact light chrome theme model:
+Codex theme exports use lines that start with `codex-theme-v1:`. Each line
+contains one JSON payload with:
+
+- `variant`
+- `codeThemeId`
+- `theme`
+
+The installer parses those payloads and writes the equivalent config keys:
+
+- `appearanceLightCodeThemeId`
+- `appearanceDarkCodeThemeId`
+- `appearanceLightChromeTheme`
+- `appearanceDarkChromeTheme`
+
+The chrome theme model includes:
 
 - `surface`
 - `ink`

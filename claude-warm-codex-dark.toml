@@ -1,0 +1,19 @@
+# Claude Warm for Codex App, dark variant
+# Paste this into ~/.codex/config.toml, replacing any existing
+# [desktop.appearanceDarkChromeTheme] block and nested tables.
+# Optional: under the existing [desktop] table, set:
+# appearanceDarkCodeThemeId = "absolutely"
+
+[desktop.appearanceDarkChromeTheme]
+accent = "#cc7d5e"
+contrast = 60
+ink = "#f9f9f7"
+opaqueWindows = false
+surface = "#2d2d2b"
+
+[desktop.appearanceDarkChromeTheme.fonts]
+
+[desktop.appearanceDarkChromeTheme.semanticColors]
+diffAdded = "#00c853"
+diffRemoved = "#ff5f38"
+skill = "#cc7d5e"
