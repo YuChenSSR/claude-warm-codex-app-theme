@@ -12,7 +12,11 @@ from pathlib import Path
 import re
 import shutil
 import sys
-import tomllib
+
+try:
+    import tomllib
+except ModuleNotFoundError:
+    tomllib = None
 
 config_path = Path(sys.argv[1]).expanduser()
 backup_dir = Path(sys.argv[2]).expanduser()
@@ -78,7 +82,8 @@ else:
         text += "\n"
     text += "\n" + theme_block
 
-tomllib.loads(text)
+if tomllib is not None:
+    tomllib.loads(text)
 config_path.write_text(text)
 
 print(f"Installed Claude Warm for Codex App in {config_path}")
